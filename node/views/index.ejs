@@ -1,0 +1,26 @@
+<h1>
+  Full Cycle Rocks!
+</h1>
+<p>
+    <!-- Create a form to send a people.name as parameter -->
+    <form action="/people" method="POST">
+        <input type="text" name="name" placeholder="Type a name">
+        <button type="submit">Send</button>
+    </form>
+</p>
+<p>
+    <!-- List all people names -->
+    <h2>People</h2>
+    <p>
+        <% if (peoples.length === 0) { %>
+            <p>There is no people yet.</p>
+        <% } %>
+</p>
+    <ul>
+        <% peoples.forEach(function(people) { %>
+          <li>
+            <strong><%= people.name %></strong>
+          </li>
+        <% }); %>
+      </ul>
+</p>
